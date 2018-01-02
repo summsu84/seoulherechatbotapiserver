@@ -1,0 +1,22 @@
+//
+   Created by JJW on 2017-10-12.
+
+extends layout
+block content
+    h1 #{title}
+    h2 #{subtitle}
+
+    form(action="/request/reg/intent/add", method="post")
+        .form-group
+            label(for="intent-list") 질문 목적:
+            select.form-control(id='intent-list', name='intent-list', enctype="application/x-www-form-urlencoded")
+                each item, i in intentList
+                    option(value='#{item.value}') #{item.name}
+        .form-group
+            label(for="etc") 기타 목적:
+            input.form-control(id='etc', name="etc", type="textbox")
+        .form-group
+            label(for="category") 질문 내용:
+            input.form-control(id='category' name="category", type="textbox", enctype="application/x-www-form-urlencoded")
+        br
+        button.btn.btn-primary(type="submit") 요청하기

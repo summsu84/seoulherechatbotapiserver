@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Narrow Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">{{projectName}}</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1 class="display-3">{{title}}</h1>
+            <p class="lead">{{content}}</p>
+            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        </div>
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                {{#each marketing}}
+                    <h4>{{subheading}}</h4>
+                    <p>{{subcontent}}</p>
+                {{/each}}
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; Company 2017</p>
+        </footer>
+
+    </div> <!-- /container -->
+    <!--<form id="formData" action='/upload', method='post', enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>챗봇을 훈련 시켜 주세요..</legend>
+            <div>
+                <label for="select_intent">질문 목적</label>
+                <select name="select_intent" id="select_intent">
+                    <option value="currentPlace">현재위치 주변 명소 찾기</option>
+                    <option value="destPlace">목적지 주변 명소 찾기</option>
+                    <option value="pathPlace">경로 주변 명소 찾기</option>
+                    <option value="recommendPlace">추천 명소 찾기</option>
+                    <option value="etc">기타</option>
+                </select>
+            </div>
+            <div>
+                <label for="input_text">입력 단어</label>
+                <input type="text" id="input_text" name="input_text" value="" placeholder="입력하신 문장을 입력하세요..">
+
+            </div>
+
+        </fieldset>
+        <br>
+
+        <input type="submit" name="upload" />
+        <input type="button" name="upload2" id="btnSend" value="수동 전송" />
+
+    </form>-->
+
+</body>
+
+<link rel="stylesheet" href="/stylesheets/style.css">
+<script src="/javascripts/api.js"></script>
+<script src="/javascripts/home.js"></script>

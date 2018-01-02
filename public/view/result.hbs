@@ -1,0 +1,72 @@
+<h1>
+    Google Cloud Vision API 사용 결과
+</h1><br>
+
+
+
+<div class="img">
+    <h3>
+        원본 이미지
+    </h3>
+    <img src={{originImgUrl}}  height="400" width="400">
+</div>
+<!--
+<div class="img">
+    <h3>
+        처리 이미지
+    </h3>
+    <canvas id="myCanvas" >
+    </canvas>
+</div>
+-->
+<div class="img">
+    <h3>
+        처리 이미지
+    </h3>
+    <canvas id="myCanvas">
+        <img src={{originImgUrl}} id="dynamic_img" />
+    </canvas>
+</div>
+
+
+
+
+
+<div class="tab">
+    <button class="tablinks" id="btnFace">Face Detection</button>
+    <button class="tablinks" id="btnLabel">Label Detection</button>
+    <!--<button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>-->
+</div>
+
+<div id="divFace" class="tabcontent">
+    {{# face}}
+        <h3>{{name}}</h3>
+        {{#each result}}
+            <h4>{{name}}</h4>
+            <table class='cooltable'>
+
+                {{#each detectList}}
+                    <tr><td>{{this}}</td>
+                    </tr>
+                {{/each}}
+            {{/each}}
+            </table>
+    {{/face}}
+</div>
+
+<div id="divLabel" class="tabcontent">
+    {{# label}}
+        <h3>Label Detection</h3>
+        <table class='cooltable'>
+        {{#each result}}
+            <tr><td>{{this}}</td></td>
+            </tr>
+        {{/each}}
+        </table>
+    {{/label}}
+
+</div>
+
+<link rel="stylesheet" href="/stylesheets/style.css">
+<script src="/javascripts/api.js"></script>
+<script src="/javascripts/result.js"></script>
